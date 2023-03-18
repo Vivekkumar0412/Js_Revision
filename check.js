@@ -336,3 +336,108 @@ for(let i = 1; i<=5; i++){
     }
 }
 console.log(str);
+
+//TASK 12
+let str = "";
+for(let i = 1; i<=5; i++){
+    if(i%2 == 0){
+        str = str + 'Y';
+        console.log(str);
+    }else{
+        str = str + 'X';
+        console.log(str);
+    }
+}
+// console.log(str);
+
+
+// TASK 13
+let n = 3;
+str = "";
+for(let i = 1; i<=n; i++){
+    if(n== 1){
+        str = str + "A";
+    }else if(n == 2){
+        str = str + "AB";
+        break;
+    }else{
+        str = str + "ABC";
+    }
+}
+console.log(str);
+console.log(str);
+
+// TASK 20
+let sum = 0;
+let n = 9999;
+for(let i = 1; i<= n; i++){
+    let lastDigit = Math.floor(n%10);
+    sum = sum + lastDigit;
+    n = Math.floor(n/10);
+}
+console.log(sum);
+
+
+// TASK 19
+
+let str1 = "";
+let str2 = "";
+let n = 9;
+for(let i = 1; i<=n; i++){
+    if(n%i == 0){
+        str1 = str1 + i + "#";
+    }else{
+        str2 = str2 + i + "#";
+    }
+}
+console.log("Divide : "+str1 + " " +"Not Divide: "+str2)
+
+
+// // TASK 15
+// let str = "";
+let n = 6;
+// for(let i = 1; i<=n; i = i+2){
+//     str = str + i + "#";
+// };
+// console.log(str);
+
+// TASK 16
+
+let str1 = "";
+let n = 9;
+for(let i = 1; i<=n; i++){
+    if(i%2 == 0){
+        str1 = str1 + "+"+ i;
+    }else{
+        str1 = str1 + "-" + i;
+    }
+};
+console.log(str1);
+
+// TASK 17
+
+let str1 = "";
+let str2 = "";
+let n = 6;
+for(let i = 1; i<=n; i++){
+    if(i%2 == 0){
+        str1 = str1 + "+"+ i;
+        str2 = str2 + i;
+    }else{
+        str1 = str1 + "-" + i;
+        str2 = str2 - i;
+    }
+};
+console.log(str1+ " "+ " " +str2);
+
+
+// TASK 20
+let sum = 0;
+let num = 9999;
+for(let i = 1; i<= num; i++){
+    let lastDigit = (num%10);
+    sum = sum + lastDigit;
+    num = num - lastDigit;
+    num = (num/10);
+}
+console.log(sum);
