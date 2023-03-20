@@ -751,3 +751,365 @@ for (let i = 0; i < str.length; i++) {
   }
 }
 console.log(newStr);
+
+
+
+
+
+// // console.log("New day !");
+// let str = "12345";
+// let len = str.length;
+// let newStr = "";
+// let middleStr = "";
+// let firstStr = "";
+// if(len %2 != 0){
+//   middleStr = middleStr + str[parseInt(len/2)]
+// };
+
+// for(let i = parseInt(len/2) + 1; i<len; i++){
+//   newStr = newStr + str[i];
+// }
+// for(let i = 0; i< parseInt(len/2); i++){
+//   firstStr = firstStr + str[i];
+// }
+// console.log(middleStr);
+// console.log(newStr);
+// console.log(firstStr);
+
+// if(middleStr != ""){
+//   console.log(newStr + middleStr + firstStr);
+// }else{
+//   console.log(newStr + firstStr);
+// }
+
+// let str = "##ab##13###c##";
+// let out = "";
+// for(let i = 0; i<str.length; i++){
+//   let ch = str[i];
+//   let lastCh = str[i-1];
+//   if(ch == "#"){
+//     if(lastCh == "#"){
+//       // nothing to do
+//     }else{
+//       out = out + ch;
+//     }
+//   }else{
+//     out = out + ch;
+//   }
+// };
+// console.log(out);
+
+
+// let str = "yesnoyesnoyesno";
+// let str2 = "yes";
+// let count = 0;
+// for(let i = 0; i<str.length; i++){
+//   console.log(str.indexOf(str2 ,i));
+// };
+// console.log(count);
+
+// TASK 24
+
+// let str = "I GOT A BIRTHDAY CARD";
+// let out = "";
+// for(let i = 0; i<str.length; i++){
+//   let ch = str[i];
+//   if(ch == 'A'){
+//     out = out + 'X';
+//   }else if(ch == 'B'){
+//     out = out + 'Y';
+//   }else if(ch == 'C' || ch == 'D'){
+//     // do noting 
+//   }else{
+//     out = out + ch;
+//   };
+// };
+// console.log(out);
+
+
+// TASK 25
+
+// let str = "x+3+45+++";
+// let out = "";
+// for(let i = 0; i<str.length; i++){
+//   let ch = str[i];
+//   let lastCh = str[i-1];
+//   if(ch == '+'){
+//     if(lastCh == '+'){
+//       //nothing to do
+//     }else{
+//       out = out + ch;
+//     }
+//   }else{
+//     out = out + ch;
+//   }
+// };
+// console.log(out);
+
+//TASK 26
+
+// let str = "AAXXXBBYYYCXXDYY";
+// let out = "";
+// for(let i = 0; i<str.length; i++){
+//   let ch = str[i];
+//   let lastCh = str[i-1];
+//   if(ch == 'X'){
+//     if(lastCh == 'X'){
+//       //no
+//     }else{
+//       out = out + ch;
+//     }
+//   }else if(ch == 'Y'){
+//     if(lastCh == 'Y'){
+//       //no
+//     }else{
+//       out = out + ch;
+//     }
+//   }else{
+//     out = out + ch;
+//   }
+// };
+// console.log(out);
+
+// TASK 27
+
+// let str = "AB CD J ava";
+// if(str.substring(0,4) == 'ABCD'){
+//   console.log("Start with ABCD")
+// }else{
+//   console.log("does not start");
+// }
+
+
+// if(str[0] == 'A' && str[1] == 'B' && str[2] == 'C' && str[3] == 'D'){
+//   console.log("Start with ABCD")
+// }else{
+//   console.log("Does not start")
+// }
+
+// task 28
+
+// let str = "Perfect";
+// let str2 = str.substring(1);
+// console.log(str2);
+// let count = 0;
+// for(let i = 0; i<str.length; i++){
+//   if(str.substring(0,i) == 'ABCD'){
+//     count++;
+//   }
+// };
+// console.log(count);
+
+
+
+// TASK 28
+
+// const str = "AB ABC ABCD ABCD ABC AB";
+// let count = 0;
+// for(let i = 0; i < str.length; i++){
+//     if(str[i] === "A" && str[i+1] === "B" && str[i+2] === "C" && str[i+3] === "D"){
+//         count++;
+//     }
+// }
+
+// console.log(count);
+
+
+// TASK 29
+
+let str = "AB ABC ABCD ABCD ABC AB";
+let result = "";
+let i = 0;
+
+while(i < str.length){
+    if(str[i] === "A" && str[i+1] === "B" && str[i+2] === "C" && str[i+3] === "D"){
+        result += "XYZ";
+        i += 4;
+    } else {
+        result += str[i];
+        i++;
+    }
+}
+
+console.log(result);
+
+
+// %%%%%%%%%%%%%%%%%%% FUNCTIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// tASK 2
+// function check(n){
+//     let sum = 0;
+//     for(let i = 1; i<=n; i++){
+//         sum = sum + i;
+//     };
+//     console.log(sum)
+// };
+// check(20);
+
+// TASK 3
+// function check(str1,ch){
+//     let str2 = "";
+//     for(let i = 0; i<str1.length; i++){
+//         if(str1[i] == ch){
+//             // nothing to do here 
+//         }else{
+//             str2 = str2 + str1[i];
+//         }
+//     };
+//     console.log(str2);
+// };
+// check("moomozm","m");
+
+// TASK 6
+
+// function rev(str){
+//     let newstr = "";
+//     for(let i = str.length-1; i>=0; i--){
+//         newstr = newstr + str[i];
+//     };
+//     console.log(newstr);
+// };
+// rev("123456789");
+
+// TASK 7
+// function ch(str,ch1,ch2){
+//     let ch1Count = 0;
+//     let ch2Count = 0;
+//     for(let i = 0; i<str.length; i++){
+//         if(str[i] == 'ch1'){
+//             ch1Count++;
+//         }else if(str[i] == ch2){
+//             ch2Count++;
+//         }
+//     };
+
+//     if(ch1Count > ch2Count){
+//         console.log("1");
+//     }else if(ch1Count == ch2Count){
+//         console.log("0");
+//     }else{
+//         console.log("-1");
+//     }
+// };
+
+// ch("moozoom","m","o");
+
+// TASK 8
+
+// function ch(str){
+//     let count1 = 0;
+//     let count2 = 0;
+//     for(let i = 0; i<str.length; i++){
+//         if(str[i] == '('){
+//             count1++;
+//         }else if(str[i] == ")"){
+//             count2++;
+//         };
+//     };
+//     if(count1 == count2){
+//         console.log("True");
+//     }else{
+//         console.log("False");
+//     }
+// };
+// ch("(a+b+(c+d*e)-(d+e*f))+3");
+
+// TASK 10
+// function p(n){
+//     let count = 0;
+//     for(let i = 2; i<n; i++){
+//         if(n%i == 0){
+//             count++;
+//             break;
+//         }
+//     };
+//     if(count == 0){
+//         console.log("Prime");
+//     }else{
+//         console.log("not a prime");
+//     }
+    
+// };
+// p(5);
+
+// TASK 11
+// function p(n){
+//     let count = 0;
+//     for(let i = 2; i<n; i++){
+//         if(n%i == 0){
+//             return false
+//         };
+//     };
+//     return true;
+// };
+// let count = 0;
+// let n = 150;
+// for(let i = 2; i<n; i++){
+//     if(p(i)){
+//         count++;
+//     }
+// }
+// console.log(count);
+
+
+
+
+
+// TASK 4
+
+// function r(n1,n2,n3){
+//     let count = 0;
+//     if(n1*n1 == n2*n2 + n3*n3){
+//         count++;
+//     }else if(n2*n2 == n1*n1 + n3*n3){
+//         count++;
+//     }else if(n3*n3 == n1*n1 + n2*n2){
+//         count++;
+//     };
+
+//     if(count>0){
+//         console.log("True");
+//     }else{
+//         console.log("False");
+//     }
+// };
+
+// r(6,8,10);
+
+// TASK 5
+
+// function checkValidity(a, b, c) 
+// { 
+    
+//     if (a + b <= c || a + c <= b || b + c <= a) 
+//         return false; 
+//     else
+//         return true; 
+// }
+// console.log(checkValidity(7,2,5));
+
+
+//  TASK 12
+// function ch(str,c){
+//     let count = 0;
+//     for(let i = 0; i<str.length; i++){
+//         if(str[i] == c){
+//             count++;
+//         }
+//     };
+//     console.log(count);
+// };
+
+// ch("abracadabra","a");
+
+// TASK 14
+function s(n){
+    let sum = 0;
+    for(let i = 1; i<=10; i++){
+        let lastDigit = n%10;
+        sum = sum + lastDigit;
+        n = (n - lastDigit)/10;
+        // n = n/10;
+    };
+    console.log(sum);
+};
+s(24681);
