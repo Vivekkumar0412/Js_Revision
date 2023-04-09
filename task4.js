@@ -100,3 +100,26 @@ console.log(ar.sort((a,b)=>{
 //         return 0;
 //     }
 // }))
+
+let sales = [
+    {name : "pepsi", price : 30, quantity : 10},
+    {name : "coke", price : 50, quantity : 10},
+    {name : "limca", price : 40, quantity : 100},
+    {name : "maza", price : 30, quantity : 100},
+    {name : "frooty", price : 35, quantity : 100},
+    {name : "mountain dew", price : 90, quantity : 1000}
+];
+
+for(let i = 0; i<sales.length; i++){
+    sales[i].value = sales[i].price * sales[i].quantity;
+}
+
+console.log(sales.sort((a,b)=>{
+    if(a.quantity * a.price < b.quantity * b.price){
+        return -1;
+    }else if(a.quantity * a.price > b.quantity * b.price){
+        return 1;
+    }else{
+        return 0;
+    }
+}));
