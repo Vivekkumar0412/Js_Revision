@@ -85,21 +85,21 @@ console.log(ar.sort((a,b)=>{
         return 0;
     }
 }))
-// console.log(ar.sort((a,b)=>{
-//     return b.age-   a.age ;
-// }))
+console.log(ar.sort((a,b)=>{
+    return b.age-   a.age ;
+}))
 
-// let name = ["vivek","akasj","jia","vipul"];
+let name = ["vivek","akasj","jia","vipul"];
 
-// console.log(name.sort((a,b)=>{
-//     if(a[0]<b[0]){
-//         return -1;
-//     }else if(a[0]>b[0]){
-//         return 1;
-//     }else{
-//         return 0;
-//     }
-// }))
+console.log(name.sort((a,b)=>{
+    if(a[0]<b[0]){
+        return -1;
+    }else if(a[0]>b[0]){
+        return 1;
+    }else{
+        return 0;
+    }
+}))
 
 let sales = [
     {name : "pepsi", price : 30, quantity : 10},
