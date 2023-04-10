@@ -122,3 +122,62 @@ console.log(
     return e[0] == ch;
   })
 );
+
+
+  
+  // Given an array of employees where each employee is a JSON
+  // with name and age, findthe employee and its index for
+  // a) age less than 35
+  // b) name of the employee starts with S
+  // c) name of the employee starts with the character provided as parameter Create suitable test cases and test properlyTask
+  
+  // 4.2Filter the abovearray of employees for
+  // a) age less than 35
+  // b) name of the employee starts with S
+  
+  let employee = [
+    { name: "vivek kumar", age: 24 },
+    { name: "pranav gupta", age: 28 },
+    { name: "sarthak sharma", age: 34 },
+    { name: "shikhar joshi", age: 17 },
+    { name: "nayanjyoti", age: 30 },
+    { name: "ranveer brar", age: 39 },
+    { name: "garima", age: 35 },
+    { name: "vikas khanna", age: 40 },
+  ];
+  
+  console.log(
+    employee.sort((a, b) => {
+      if (a.age < b.age) {
+        return -1;
+      } else if (a.age > b.age) {
+        return 1;
+      } else {
+        return 0;
+      }
+    })
+  );
+  
+  console.log(
+    employee.find((e) => {
+      return e.age < 35;
+    })
+  );
+  
+  console.log(
+    employee.findIndex((e) => {
+      return e.age < 35;
+    })
+  );
+  
+  console.log(
+    employee.filter((e) => {
+      return e.name[0] == "s";
+    })
+  );
+  
+  console.log(
+    employee.filter((e) => {
+      return e.age > 35;
+    })
+  );
