@@ -312,3 +312,23 @@ console.log(
       return e.maths < 50;
     })
   );
+
+
+    
+  // Task 6.6Filter the array for students with total marks more than 200. Also find its index.Task
+  //  6.7Filter the array for studentswho scored more in maths than english.
+  //  Task 6.8Given a number n, filter the array for students who scored more than n in all subjects.
+  //  Task 6.9Given two numbers n1 and n2 as input,
+  // filter the array for those whose marks in maths is more than n1 and marks in science is more than n2
+  
+  console.log(
+    students.filter((e) => {
+      return totalMark(e) > 200;
+    })
+  );
+  
+  console.log(
+    students.filter((e) => {
+      return e.maths > num && e.science > num2;
+    })
+  );
