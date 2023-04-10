@@ -70,3 +70,33 @@ console.log(
     })
   );
   
+  // Given an array of names, find the name and its index for
+  //  a) length of name is greater than 5
+  //  b) starts with P
+  //  c) starts with the character provided as a parameter
+  
+  let ar2 = [
+    "vivek",
+    "divya",
+    "pranav",
+    "sikhar",
+    "shreyansh",
+    "akash",
+    "pritam",
+    "juhi",
+    "kareena",
+    "sahrukh",
+  ];
+  
+  let ch = "s";
+  console.log(
+    ar2.find((e) => {
+      return e.length > 4;
+    })
+  );
+  
+  console.log(
+    ar2.find((e) => {
+      return e[0] == ch;
+    })
+  );
