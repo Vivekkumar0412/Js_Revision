@@ -230,3 +230,58 @@ console.log(
       }
     })
   );
+
+
+    // Given an array of JSON representing students,
+  
+  // Task 6.1
+  // Find the first student who has scored less than 50 in Maths. Also find its index.
+  // Task 6.2Find the first student whose total marks in more than 200. Also find its index.
+  // Task 6.3Find the first student who scored more in maths than english. Also find its index.
+  // Task 6.4 Given a number n, find the first student who scored more than n in all subjects. Also find its index.
+  // Task 6.5Filter the array for studentswho scored less than 50 in Maths.
+  // Task 6.6Filter the array for students with total marks more than 200. Also find its index.Task
+  //  6.7Filter the array for studentswho scored more in maths than english.
+  //  Task 6.8Given a number n, filter the array for students who scored more than n in all subjects.
+  //  Task 6.9Given two numbers n1 and n2 as input, filter the array for those whose marks in maths is more than n1 and marks in science is more than n2
+  
+  let students = [
+    { name: "Jack", maths: 55, english: 60, science: 62 },
+    { name: "Anita", maths: 62, english: 65, science: 56 },
+    { name: "Thomas", maths: 68, english: 72, science: 75 },
+    { name: "Steve", maths: 51, english: 56, science: 68 },
+    { name: "Julia", maths: 47, english: 77, science: 72 },
+    { name: "Mary", maths: 72, english: 55, science: 81 },
+  ];
+  
+  console.log(students);
+  
+  let totalMark = (ar) => {
+    let total = 0;
+    total = total + ar.maths + ar.english + ar.science;
+    return total;
+  };
+  
+  console.log(
+    students.find((e) => {
+      return e.maths < 50;
+    })
+  );
+  
+  console.log(
+    students.findIndex((e) => {
+      return e.maths < 50;
+    })
+  );
+  
+  console.log(
+    students.find((e) => {
+      return totalMark(e) > 200;
+    })
+  );
+  
+  console.log(
+    students.findIndex((e) => {
+      return totalMark(e) > 200;
+    })
+  );
