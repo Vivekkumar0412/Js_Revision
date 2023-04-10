@@ -45,3 +45,28 @@ console.log(
     return elem > 10;
   })
 );
+
+
+// Given an array of numbers, filter the arraya
+// a) equal to 10
+// b) greater than 30
+// c) multiple of 3
+
+console.log(
+    ar.filter((e) => {
+      return e == 10;
+    })
+  );
+  
+  console.log(
+    ar.filter((e) => {
+      return e > 30;
+    })
+  );
+  
+  console.log(
+    ar.filter((e) => {
+      return e % 3 == 0;
+    })
+  );
+  
