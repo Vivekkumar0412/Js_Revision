@@ -409,3 +409,58 @@ console.log(
       return e.country == str;
     })
   );
+
+
+    
+  // Task 8.1Filter the array for those whose total marks is less than 250.
+  // Task 8.2Filter the array for those who have atleast 1 mark more than 70
+  // Task 8.3Filter the array for those who have scored 2 or more marks greater than 70.
+  // Task 8.4Given a number avg, filter the array for those whose average marks is greater than avg
+  
+  const student2 = [
+    { name: "Mary", marks: [72, 65, 55, 70] },
+    { name: "Anita", marks: [66, 70, 75, 53] },
+    { name: "Edward", marks: [44, 54, 64, 58] },
+    { name: "Thomas", marks: [62, 55, 65, 81] },
+    { name: "Robin", marks: [41, 44, 47, 49] },
+    { name: "Sophia", marks: [71, 73, 67, 77] },
+    { name: "Bruce", marks: [52, 57, 61, 64] },
+  ];
+  
+  console.log(student2);
+  let totalMark2 = (ar) => {
+    let total = 0;
+    for (let i = 0; i < ar.marks.length; i++) {
+      total += ar.marks[i];
+    }
+    return total;
+  };
+  
+  console.log(
+    student2.filter((e) => {
+      return totalMark2(e) < 250;
+    })
+  );
+  
+  console.log(
+    student2.filter((e) => {
+      for (let i = 0; i < e.marks.length; i++) {
+        if (e.marks[i] > 70) {
+          return e;
+        }
+      }
+    })
+  );
+  
+  const avgMarks = (obj) => {
+    let avg = 0;
+    let total = totalMark2(obj);
+    avg = total / (obj.marks.length - 1);
+    return avg;
+  };
+  
+  console.log(
+    student2.filter((e) => {
+      return avgMarks(e) > 80;
+    })
+  );
