@@ -464,3 +464,59 @@ console.log(
       return avgMarks(e) > 80;
     })
   );
+
+    // 9Define a function that takes an array of JSON,
+  // a string and a boolean as parameters.
+  // If the the boolean is true, filter and return the array whose name match the given string.
+  // If the boolean is false, filter and return the array who tech match the given string
+  
+  const data3 = [
+    { name: "Jack", tech: "Android" },
+    { name: "Mary", tech: "React" },
+    { name: "Bob", tech: "Angular" },
+    { name: "Steve", tech: "Spring" },
+    { name: "James", tech: "Android" },
+    { name: "Julia", tech: "Android" },
+    { name: "Michel", tech: "React" },
+    { name: "Bill", tech: "Angular" },
+    { name: "Sonny", tech: "Spring" },
+    { name: "Martins", tech: "React" },
+    { name: "Bruce", tech: "Angular" },
+    { name: "Sam", tech: "Spring" },
+  ];
+  
+  const mixData = (arr, str, isTrue) => {
+    let ans;
+    if (isTrue == true) {
+      ans = arr.filter((e) => {
+        return e.tech == str;
+      });
+    } else {
+      return false;
+    }
+    return ans;
+  };
+  
+  let d = mixData(data3, "Spring", true);
+  console.log(d);
+  
+  console.log(ar3.join(" $ "));
+  
+  let seprator = (ar, sep) => {
+    return ar.join(sep);
+  };
+  
+  console.log(seprator(ar3, " ^ "));
+  
+  const numarr = [12, 5, -6, 10, -9, 4, 0, -23, 34];
+  console.log(
+    numarr.sort((a, b) => {
+      if (a < b) {
+        return -1;
+      } else if (a > b) {
+        return 1;
+      } else {
+        return 0;
+      }
+    })
+  );
