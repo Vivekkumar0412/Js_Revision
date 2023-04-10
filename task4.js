@@ -285,3 +285,30 @@ console.log(
       return totalMark(e) > 200;
     })
   );
+
+    
+  console.log(
+    students.find((e) => {
+      return e.maths > e.english;
+    })
+  );
+  
+  console.log(
+    students.findIndex((e) => {
+      return e.maths > e.english;
+    })
+  );
+  
+  let num = 60;
+  let num2 = 50;
+  console.log(
+    students.find((e) => {
+      return e.english > num && e.maths > num && e.science > num;
+    })
+  );
+  
+  console.log(
+    students.filter((e) => {
+      return e.maths < 50;
+    })
+  );
