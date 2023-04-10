@@ -123,61 +123,84 @@ console.log(
   })
 );
 
+// Given an array of employees where each employee is a JSON
+// with name and age, findthe employee and its index for
+// a) age less than 35
+// b) name of the employee starts with S
+// c) name of the employee starts with the character provided as parameter Create suitable test cases and test properlyTask
 
-  
-  // Given an array of employees where each employee is a JSON
-  // with name and age, findthe employee and its index for
-  // a) age less than 35
-  // b) name of the employee starts with S
-  // c) name of the employee starts with the character provided as parameter Create suitable test cases and test properlyTask
-  
-  // 4.2Filter the abovearray of employees for
-  // a) age less than 35
-  // b) name of the employee starts with S
-  
-  let employee = [
-    { name: "vivek kumar", age: 24 },
-    { name: "pranav gupta", age: 28 },
-    { name: "sarthak sharma", age: 34 },
-    { name: "shikhar joshi", age: 17 },
-    { name: "nayanjyoti", age: 30 },
-    { name: "ranveer brar", age: 39 },
-    { name: "garima", age: 35 },
-    { name: "vikas khanna", age: 40 },
-  ];
-  
-  console.log(
-    employee.sort((a, b) => {
-      if (a.age < b.age) {
-        return -1;
-      } else if (a.age > b.age) {
-        return 1;
-      } else {
-        return 0;
-      }
-    })
-  );
-  
-  console.log(
-    employee.find((e) => {
-      return e.age < 35;
-    })
-  );
-  
-  console.log(
-    employee.findIndex((e) => {
-      return e.age < 35;
-    })
-  );
-  
-  console.log(
-    employee.filter((e) => {
-      return e.name[0] == "s";
-    })
-  );
-  
-  console.log(
-    employee.filter((e) => {
-      return e.age > 35;
-    })
-  );
+// 4.2Filter the abovearray of employees for
+// a) age less than 35
+// b) name of the employee starts with S
+
+let employee = [
+  { name: "vivek kumar", age: 24 },
+  { name: "pranav gupta", age: 28 },
+  { name: "sarthak sharma", age: 34 },
+  { name: "shikhar joshi", age: 17 },
+  { name: "nayanjyoti", age: 30 },
+  { name: "ranveer brar", age: 39 },
+  { name: "garima", age: 35 },
+  { name: "vikas khanna", age: 40 },
+];
+
+console.log(
+  employee.sort((a, b) => {
+    if (a.age < b.age) {
+      return -1;
+    } else if (a.age > b.age) {
+      return 1;
+    } else {
+      return 0;
+    }
+  })
+);
+
+console.log(
+  employee.find((e) => {
+    return e.age < 35;
+  })
+);
+
+console.log(
+  employee.findIndex((e) => {
+    return e.age < 35;
+  })
+);
+
+console.log(
+  employee.filter((e) => {
+    return e.name[0] == "s";
+  })
+);
+
+console.log(
+  employee.filter((e) => {
+    return e.age > 35;
+  })
+);
+
+// Given an array of string, find the first string whichendsin t.
+// Also find its index.
+// Also filter the array.For e.g. if the array was ['Hello', 'React', 'Java', 'Python', 'Hibernate', 'JavaScript']
+//  the output should be React and index should be 1and the output of filter should be ['React','JavaScript']
+
+let ar3 = ["Hello", "React", "Java", "Python", "Hibernate", "JavaScript"];
+
+console.log(
+  ar3.find((e) => {
+    return e[e.length - 1] == "t";
+  })
+);
+
+console.log(
+  ar3.findIndex((e) => {
+    return e[e.length - 1] == "t";
+  })
+);
+
+console.log(
+  ar3.filter((e) => {
+    return e[e.length - 1] == "t";
+  })
+);
