@@ -332,3 +332,60 @@ console.log(
       return e.maths > num && e.science > num2;
     })
   );
+
+    
+  // Task 7.1Filter the array for those whose country is India.
+  // Also find and findIndex the first JSON whose country is India.
+  // Task 7.2Filter the array for those whose country is Indiaand age is less than 35.
+  // Also find and findIndex the first JSON whose country is Indiaand age is less than 35.Task
+  // 7.3Filter the array for those whose names has less than 6 characters
+  // .Also find and findIndex the first JSON whose names has less than 6 characters.
+  // Task 7.4Filter the array for those whose country is either Indiaor USA.
+  // Also find and findIndex the first JSON whose country is either India or USA.Task
+  // 7.5Given a number minAge, filter the array for those whose age is greater than minAge.
+  // Also find and findIndex the first JSON whose age is greater than minAge.Task
+  // 7.6Given a string str as input,filter the array for those whose country is one specified in str.
+  
+  const data = [
+    { name: "Jack", country: "USA", age: 35 },
+    { name: "Amit", country: "India", age: 38 },
+    { name: "Edward", country: "USA", age: 41 },
+    { name: "Vishal", country: "India", age: 30 },
+    { name: "Annie", country: "USA", age: 27 },
+    { name: "Nick", country: "France", age: 32 },
+    { name: "Francis", country: "France", age: 44 },
+    { name: "Preeti", country: "India", age: 25 },
+    { name: "Sophie", country: "France", age: 29 },
+    { name: "Harpreet", country: "India", age: 48 },
+    { name: "Bob", country: "USA", age: 21 },
+  ];
+  
+  console.log(
+    data.sort((a, b) => {
+      if (a.age < b.age) {
+        return -1;
+      } else if (a.age > b.age) {
+        return 1;
+      } else {
+        return 0;
+      }
+    })
+  );
+  
+  console.log(
+    data.filter((e) => {
+      return e.country == "India";
+    })
+  );
+  
+  console.log(
+    data.find((e) => {
+      return e.country == "India";
+    })
+  );
+  
+  console.log(
+    data.findIndex((e) => {
+      return e.country == "India";
+    })
+  );
