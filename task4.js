@@ -204,3 +204,29 @@ console.log(
     return e[e.length - 1] == "t";
   })
 );
+
+  
+  // Given a character ch, find the first string has thech in it.
+  //  Also finds its index and filter the array.
+  //  So, for the above array if ch = 'y', the output should be Python, 3 and ['Python']
+  //  If ch='a'the output should be React, 1 and ['React', 'Java', 'Hibernate', 'JavaScript'].
+  let ch2 = "v";
+  console.log(
+    ar3.find((e) => {
+      for (let i = 0; i < e.length; i++) {
+        if (e[i] == ch2) {
+          return e;
+        }
+      }
+    })
+  );
+  
+  console.log(
+    ar3.filter((e) => {
+      for (let i = 0; i < e.length; i++) {
+        if (e[i] == "e") {
+          return e;
+        }
+      }
+    })
+  );
