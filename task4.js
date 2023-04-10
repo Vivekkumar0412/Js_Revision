@@ -389,3 +389,23 @@ console.log(
       return e.country == "India";
     })
   );
+
+    
+  console.log(
+    data.filter((e) => {
+      return e.country == "India" && e.age > 30;
+    })
+  );
+  
+  console.log(
+    data.filter((e) => {
+      return e.name.length > 6;
+    })
+  );
+  
+  let str = "USA";
+  console.log(
+    data.filter((e) => {
+      return e.country == str;
+    })
+  );
