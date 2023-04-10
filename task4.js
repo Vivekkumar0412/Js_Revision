@@ -46,57 +46,79 @@ console.log(
   })
 );
 
-
 // Given an array of numbers, filter the arraya
 // a) equal to 10
 // b) greater than 30
 // c) multiple of 3
 
 console.log(
-    ar.filter((e) => {
-      return e == 10;
-    })
-  );
-  
-  console.log(
-    ar.filter((e) => {
-      return e > 30;
-    })
-  );
-  
-  console.log(
-    ar.filter((e) => {
-      return e % 3 == 0;
-    })
-  );
-  
-  // Given an array of names, find the name and its index for
-  //  a) length of name is greater than 5
-  //  b) starts with P
-  //  c) starts with the character provided as a parameter
-  
-  let ar2 = [
-    "vivek",
-    "divya",
-    "pranav",
-    "sikhar",
-    "shreyansh",
-    "akash",
-    "pritam",
-    "juhi",
-    "kareena",
-    "sahrukh",
-  ];
-  
-  let ch = "s";
-  console.log(
-    ar2.find((e) => {
-      return e.length > 4;
-    })
-  );
-  
-  console.log(
-    ar2.find((e) => {
-      return e[0] == ch;
-    })
-  );
+  ar.filter((e) => {
+    return e == 10;
+  })
+);
+
+console.log(
+  ar.filter((e) => {
+    return e > 30;
+  })
+);
+
+console.log(
+  ar.filter((e) => {
+    return e % 3 == 0;
+  })
+);
+
+// Given an array of names, find the name and its index for
+//  a) length of name is greater than 5
+//  b) starts with P
+//  c) starts with the character provided as a parameter
+
+let ar2 = [
+  "vivek",
+  "divya",
+  "pranav",
+  "sikhar",
+  "shreyansh",
+  "akash",
+  "pritam",
+  "juhi",
+  "kareena",
+  "sahrukh",
+];
+
+let ch = "s";
+console.log(
+  ar2.find((e) => {
+    return e.length > 4;
+  })
+);
+
+console.log(
+  ar2.find((e) => {
+    return e[0] == ch;
+  })
+);
+
+// iven an array of names, filter the array for
+//  a) length of name is greater than 5
+//  b) starts with s
+//  c) starts with the character provided as a paramete
+
+console.log(
+  ar2.filter((e) => {
+    return e.length > 5;
+  })
+);
+
+console.log(
+  ar2.filter((e) => {
+    return e[0] == "s";
+  })
+);
+
+console.log(
+  ar2.filter((e) => {
+    return e[0] == ch;
+  })
+);
