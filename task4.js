@@ -520,3 +520,34 @@ console.log(
       }
     })
   );
+
+    
+  const st = [
+    { name: "Jack", maths: 55, english: 60, science: 62 },
+    { name: "Anita", maths: 62, english: 65, science: 56 },
+    { name: "Thomas", maths: 68, english: 58, science: 54 },
+    { name: "Steve", maths: 51, english: 56, science: 68 },
+    { name: "Julia", maths: 47, english: 77, science: 72 },
+    { name: "Mary", maths: 72, english: 55, science: 60 },
+  ];
+  
+  // let totalMark = (ar) => {
+  //     let total = 0;
+  //     total = total + ar.maths + ar.english + ar.science;
+  //     return total;
+  //   };
+  for(let i = 0; i<st.length; i++){
+      st[i].total_marks = totalMark(st[i]);
+  };
+  console.log(st);
+  
+  console.log(st.sort((a,b)=>{
+      if(a.total_marks < b.total_marks){
+          return -1;
+      }else if(a.total_marks > b.total_marks){
+          return 1;
+      }else{
+          return 0;
+      }
+  }))
+  
