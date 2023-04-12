@@ -569,44 +569,89 @@ const country = [
   { name: "Bob", country: "USA", age: 21 },
 ];
 
-console.log(country.sort((a,b)=>{
-  if(a.name[0] < b.name[0]){
-    return -1;
-  }else if(a.name[0]>b.name[0]){
-    return 1;
-  }else{
-    return 0;
-  }
-}))
-
-console.log(country.sort((a,b)=>{
-  if(a.age < b.age){
-    return 1;
-  }else if(a.age > b.age){
-    return -1;
-  }else{
-    return 0;
-  }
-}))
-
-// Task15.5Define a function that takes a country as parameter and returns 
-// an array of people in that country sorted by age in descending order.
-
-let peopleInCountry = (count)=>{
-  let ar = country.filter((elem)=>{
-      return elem.country == count;
-  });
-  // console.log(ar);
-  ar.sort((a,b)=>{
-    if(a.age < b.age){
-      return 1;
-    }else if(a.age > b.age){
+console.log(
+  country.sort((a, b) => {
+    if (a.name[0] < b.name[0]) {
       return -1;
-    }else{
+    } else if (a.name[0] > b.name[0]) {
+      return 1;
+    } else {
       return 0;
     }
   })
+);
+
+console.log(
+  country.sort((a, b) => {
+    if (a.age < b.age) {
+      return 1;
+    } else if (a.age > b.age) {
+      return -1;
+    } else {
+      return 0;
+    }
+  })
+);
+
+// Task15.5Define a function that takes a country as parameter and returns
+// an array of people in that country sorted by age in descending order.
+
+let peopleInCountry = (count) => {
+  let ar = country.filter((elem) => {
+    return elem.country == count;
+  });
+  // console.log(ar);
+  ar.sort((a, b) => {
+    if (a.age < b.age) {
+      return 1;
+    } else if (a.age > b.age) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
   return ar;
 };
 
 console.log(peopleInCountry("USA"));
+
+// Task16.1Sort the array in descendingorder of sum ofmarksarray.
+// Task16.2Sort the array in ascendingorder of maximum value in marks array.
+// Task16.3Given a number cutoff, count the number of elements in the marks array greater than cutoff. Sort the JSON array in descending order of this count.
+// Task16.4Define a function that takesa minTotalas parameter and returns an array of JSON whose total marks is greater than minTotalsorted by total scorein descending order.
+// Task16.5Define a function that takesa minScoreas parameter and returns an array of JSON in which all the entries in marks array is greater than minScoresorted by namein ascending order
+
+let st4 = [
+  { name: "Mary", marks: [72, 65, 55, 71] },
+  { name: "Anita", marks: [66, 70, 75, 53] },
+  { name: "Edward", marks: [44, 54, 64, 58] },
+  { name: "Thomas", marks: [62, 55, 65, 81] },
+  { name: "Robin", marks: [41, 44, 47, 49] },
+  { name: "Sophia", marks: [71, 73, 67, 77] },
+  { name: "Bruce", marks: [52, 57, 61, 64] },
+];
+
+const sumOfMarks = (obj)=>{
+  let sum = 0;
+  for(let i = 0; i<obj.marks.length; i++){
+    sum += obj.marks[i];
+  };
+  return sum;
+};
+for(let i = 0; i<st4.length; i++){
+  st4[i].total_Marks = sumOfMarks(st4[i]);
+}
+
+console.log(st4.sort((a,b)=>{
+  if(sumOfMarks(a) < sumOfMarks(b)){
+    return -1;
+  }else if(sumOfMarks(a) > sumOfMarks(b)){
+    return 1;
+  }else{
+    return 0;
+  }
+}));
+
+console.log(st4.filter((elem)=>{
+    return elem.total_Marks < 250;
+}))
