@@ -588,3 +588,25 @@ console.log(country.sort((a,b)=>{
     return 0;
   }
 }))
+
+// Task15.5Define a function that takes a country as parameter and returns 
+// an array of people in that country sorted by age in descending order.
+
+let peopleInCountry = (count)=>{
+  let ar = country.filter((elem)=>{
+      return elem.country == count;
+  });
+  // console.log(ar);
+  ar.sort((a,b)=>{
+    if(a.age < b.age){
+      return 1;
+    }else if(a.age > b.age){
+      return -1;
+    }else{
+      return 0;
+    }
+  })
+  return ar;
+};
+
+console.log(peopleInCountry("USA"));
