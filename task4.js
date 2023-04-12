@@ -514,6 +514,10 @@ console.log(
   
   console.log(seprator(ar3, " ^ "));
   
+  // Task 12Given an array of numbers like [12,5,-6,10,-9,4,0,-23,34]
+  // a) Sort the numbers in ascending order
+  // b) sort the numbers in descending order
+  // c) sort the numbers based on their absolute valuein ascending orderCreate suitable test cases and test properl
   const numarr = [12, 5, -6, 10, -9, 4, 0, -23, 34];
   console.log(
     numarr.sort((a, b) => {
@@ -527,7 +531,11 @@ console.log(
     })
   );
 
-    
+  // Task14.1Sort the array in ascending order of name.
+  // Task14.2Sort the array in descendingorder of name.
+  // Task14.3Sort the array in ascending order of total marksin 3 subjects.
+  // Task14.4Sort the array in descendingorder marks in maths
+
   const st = [
     { name: "Jack", maths: 55, english: 60, science: 62 },
     { name: "Anita", maths: 62, english: 65, science: 56 },
