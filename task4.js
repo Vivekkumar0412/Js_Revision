@@ -499,6 +499,12 @@ console.log(
   
   let d = mixData(data3, "Spring", true);
   console.log(d);
+
+
+  // Given an array of string, create a string as shown.
+  //  Use join.Test CasesInputExpected Output["Hi","Hello","Bye"]Hi#Hello#Bye
+  //  ["A","B","C","X","Y"]A#B#C#X#Y["AB","!2","EF"]AB#12#EF
+
   
   console.log(ar3.join(" $ "));
   
@@ -550,4 +556,5 @@ console.log(
           return 0;
       }
   }))
+  
   
