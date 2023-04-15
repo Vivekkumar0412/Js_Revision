@@ -183,3 +183,17 @@ console.log(
   })
 );
 
+
+// Task  4 an array of numbers, create a new array whose numbers the same if even and zero if odd. Use map
+
+let arr3 = [10, 2, 3, 5, 9, 1, 7, 17, 40, 5, 6];
+console.log(
+  arr3.map((elem) => {
+    if (elem % 2 == 0) {
+      return elem;
+    } else {
+      return 0;
+    }
+  })
+);
+
