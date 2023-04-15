@@ -271,4 +271,23 @@ let arr8 = [
   let list2 = new_arr8.join("");
   console.log(list2);
   console.log(new_arr8);
+
   
+
+  let arr9 = [
+    { name: "Mary", marks: 72 },
+    { name: "Anita", marks: 75 },
+    { name: "Thomas", marks: 81 },
+    { name: "Bruce", marks: 64 },
+  ];
+  let new_arr9 = arr9.map((elem)=>{
+      let str = `<tr><td>${elem.name}</td><td>${elem.marks}</td><td><button onClick=show(${elem.name})>Show More</button></td></tr>`;
+      return str;
+  });
+  
+  let list3 = new_arr9.join("");
+  console.log(new_arr9);
+  console.log(list3);
+  
+  // let t = document.getElementById("t");
+  // t.append(list3);
