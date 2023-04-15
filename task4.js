@@ -331,3 +331,12 @@ console.log(arr12.reduce((acc,crr)=>{
 console.log(arr12.reduce((acc,crr)=>{
     return acc * crr;
 }));
+
+
+console.log(arr12.reduce((a,b)=>{
+    if(a < b){
+        return a;
+    }else{
+        return b;
+    }
+}));
