@@ -212,3 +212,12 @@ console.log(
   })
 );
 
+
+// Task 6 Given an array of string, create a new array whose strings are double the string in the array. Use map.
+let arr5 = ["vi", "hi", "gi", "di"];
+console.log(
+  arr5.map((elem) => {
+    return elem + elem;
+  })
+);
+
