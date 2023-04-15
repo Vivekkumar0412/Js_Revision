@@ -312,4 +312,17 @@ let arr11 = [
       let str = `fname : ${elem.fname} , lname : ${elem.lname} , city : ${elem.city} , fullname : ${`${elem.fname}  ${elem.lname}`}`;
       return str;
   }))
+
   
+  
+// Task14 Given an array of numbers, use reduce to 
+// a) compute the sum of the numbers
+// b) product of numbers
+// c) max number
+// d) min number
+// e) count the numbers greater than 10
+
+let arr12 = [2,3,3,567,4,222,5,666,543,2114,5,4646,64,57];
+console.log(arr12.reduce((acc,crr)=>{
+    return acc + crr;
+}));
