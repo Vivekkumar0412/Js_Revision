@@ -238,4 +238,17 @@ let arr6 = [
       return str;
     })
   );
-  
+
+
+// TASK 8 Given an array of names, create a string using map and join as shown below.
+// So, if the array was ["Mark","James","Martha"]
+// the string should be <ul><li>Mark</li><li>James</li><li>Martha</li></ul>
+
+let arr7 = ["Mark", "James", "Martha"];
+let new_arr7 = arr7.map((elem) => {
+  return `<li>${elem}</li>`;
+});
+let list = `<ul>${new_arr7.join("")}</ul>`;
+console.log(new_arr7);
+console.log(list);
+
