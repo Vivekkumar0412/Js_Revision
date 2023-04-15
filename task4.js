@@ -326,3 +326,8 @@ let arr12 = [2,3,3,567,4,222,5,666,543,2114,5,4646,64,57];
 console.log(arr12.reduce((acc,crr)=>{
     return acc + crr;
 }));
+
+
+console.log(arr12.reduce((acc,crr)=>{
+    return acc * crr;
+}));
