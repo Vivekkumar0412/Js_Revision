@@ -221,3 +221,21 @@ console.log(
   })
 );
 
+
+// Task7 Given an array of JSON, create a new array of strings as shown.
+// Use map.So, if the JSON array is
+// the output array is ["Mark is 23 years old", "Steve is 28 years old", "Mary is 25 years old", "Bill is 34 years old"]
+
+let arr6 = [
+    { name: "Mark", age: 23 },
+    { name: "Steve", age: 28 },
+    { name: "Mary", age: 25 },
+    { name: "Bill", age: 34 },
+  ];
+  console.log(
+    arr6.map((elem) => {
+      let str = `${elem.name} is ${elem.age} years old`;
+      return str;
+    })
+  );
+  
