@@ -252,3 +252,23 @@ let list = `<ul>${new_arr7.join("")}</ul>`;
 console.log(new_arr7);
 console.log(list);
 
+
+// Task 9 Given an array of JSONs, create a string using map and join as shown below.
+// So, if the array was [{"id" : 101, "name" : "Mark},{"id" : 105, "name" : "Steve},{"id" : 78, "name" : "James"}]
+// the string should be
+/* <button onClick=clicked(101)>Mark</button> <button onClick=clicked(105)>Steve</button><button onClick=clicked(78)>James</button> */
+let arr8 = [
+    { id: 101, name: "Mark" },
+    { id: 105, name: "Steve" },
+    { id: 78, name: "James" },
+  ];
+  
+  let new_arr8 = arr8.map((elem) => {
+    let str = `<button onClick=clicked(${elem.id})>${elem.name}</button>`;
+    return str;
+  });
+  
+  let list2 = new_arr8.join("");
+  console.log(list2);
+  console.log(new_arr8);
+  
