@@ -183,7 +183,6 @@ console.log(
   })
 );
 
-
 // Task  4 an array of numbers, create a new array whose numbers the same if even and zero if odd. Use map
 
 let arr3 = [10, 2, 3, 5, 9, 1, 7, 17, 40, 5, 6];
@@ -196,8 +195,6 @@ console.log(
     }
   })
 );
-
-
 
 // Given an array of numbers,
 // create a new array whose has the string Even if the number is even, and Odd if the number is Odd. Use map.
@@ -212,7 +209,6 @@ console.log(
   })
 );
 
-
 // Task 6 Given an array of string, create a new array whose strings are double the string in the array. Use map.
 let arr5 = ["vi", "hi", "gi", "di"];
 console.log(
@@ -221,24 +217,22 @@ console.log(
   })
 );
 
-
 // Task7 Given an array of JSON, create a new array of strings as shown.
 // Use map.So, if the JSON array is
 // the output array is ["Mark is 23 years old", "Steve is 28 years old", "Mary is 25 years old", "Bill is 34 years old"]
 
 let arr6 = [
-    { name: "Mark", age: 23 },
-    { name: "Steve", age: 28 },
-    { name: "Mary", age: 25 },
-    { name: "Bill", age: 34 },
-  ];
-  console.log(
-    arr6.map((elem) => {
-      let str = `${elem.name} is ${elem.age} years old`;
-      return str;
-    })
-  );
-
+  { name: "Mark", age: 23 },
+  { name: "Steve", age: 28 },
+  { name: "Mary", age: 25 },
+  { name: "Bill", age: 34 },
+];
+console.log(
+  arr6.map((elem) => {
+    let str = `${elem.name} is ${elem.age} years old`;
+    return str;
+  })
+);
 
 // TASK 8 Given an array of names, create a string using map and join as shown below.
 // So, if the array was ["Mark","James","Martha"]
@@ -252,42 +246,52 @@ let list = `<ul>${new_arr7.join("")}</ul>`;
 console.log(new_arr7);
 console.log(list);
 
-
 // Task 9 Given an array of JSONs, create a string using map and join as shown below.
 // So, if the array was [{"id" : 101, "name" : "Mark},{"id" : 105, "name" : "Steve},{"id" : 78, "name" : "James"}]
 // the string should be
 /* <button onClick=clicked(101)>Mark</button> <button onClick=clicked(105)>Steve</button><button onClick=clicked(78)>James</button> */
 let arr8 = [
-    { id: 101, name: "Mark" },
-    { id: 105, name: "Steve" },
-    { id: 78, name: "James" },
-  ];
-  
-  let new_arr8 = arr8.map((elem) => {
-    let str = `<button onClick=clicked(${elem.id})>${elem.name}</button>`;
-    return str;
-  });
-  
-  let list2 = new_arr8.join("");
-  console.log(list2);
-  console.log(new_arr8);
+  { id: 101, name: "Mark" },
+  { id: 105, name: "Steve" },
+  { id: 78, name: "James" },
+];
 
-  
+let new_arr8 = arr8.map((elem) => {
+  let str = `<button onClick=clicked(${elem.id})>${elem.name}</button>`;
+  return str;
+});
 
-  let arr9 = [
-    { name: "Mary", marks: 72 },
-    { name: "Anita", marks: 75 },
-    { name: "Thomas", marks: 81 },
-    { name: "Bruce", marks: 64 },
-  ];
-  let new_arr9 = arr9.map((elem)=>{
-      let str = `<tr><td>${elem.name}</td><td>${elem.marks}</td><td><button onClick=show(${elem.name})>Show More</button></td></tr>`;
-      return str;
-  });
-  
-  let list3 = new_arr9.join("");
-  console.log(new_arr9);
-  console.log(list3);
-  
-  // let t = document.getElementById("t");
-  // t.append(list3);
+let list2 = new_arr8.join("");
+console.log(list2);
+console.log(new_arr8);
+
+let arr9 = [
+  { name: "Mary", marks: 72 },
+  { name: "Anita", marks: 75 },
+  { name: "Thomas", marks: 81 },
+  { name: "Bruce", marks: 64 },
+];
+let new_arr9 = arr9.map((elem) => {
+  let str = `<tr><td>${elem.name}</td><td>${elem.marks}</td><td><button onClick=show(${elem.name})>Show More</button></td></tr>`;
+  return str;
+});
+
+let list3 = new_arr9.join("");
+console.log(new_arr9);
+console.log(list3);
+
+// let t = document.getElementById("t");
+// t.append(list3);
+
+//   Task 12 Given an array of JSON, use map to create an array of cities.So, the new array should be ["London","Amsterdam","Paris","Rome"]
+let arr10 = [
+  { fname: "Jack", lname: "Smith", city: "London" },
+  { fname: "Mary", lname: "Markle", city: "Amsterdam" },
+  { fname: "Ed", lname: "May", city: "Paris" },
+  { fname: "Tim", lname: "Gates", city: "Rome" },
+];
+console.log(
+  arr10.map((elem) => {
+    return elem.city;
+  })
+);
