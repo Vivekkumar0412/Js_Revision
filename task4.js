@@ -295,3 +295,21 @@ console.log(
     return elem.city;
   })
 );
+
+
+
+// Task 13 Given an array of JSON Create a new array of JSON which has an additional field fullname in it.
+//  For the first JSON the fullname is "Jack Smith"
+
+let arr11 = [
+    { fname: "Jack", lname: "Smith", city: "London" },
+    { fname: "Mary", lname: "Markle", city: "Amsterdam" },
+    { fname: "Ed", lname: "May", city: "Paris" },
+    { fname: "Tim", lname: "Gates", city: "Rome" },
+  ];
+  
+  console.log(arr11.map((elem)=>{
+      let str = `fname : ${elem.fname} , lname : ${elem.lname} , city : ${elem.city} , fullname : ${`${elem.fname}  ${elem.lname}`}`;
+      return str;
+  }))
+  
