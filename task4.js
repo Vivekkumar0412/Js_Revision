@@ -340,3 +340,14 @@ console.log(arr12.reduce((a,b)=>{
         return b;
     }
 }));
+
+
+console.log(arr12.reduce((a,b)=>{
+    let count = 0;
+    if(b > 100){
+        count++;
+        a+=count;
+    };
+
+    return a;
+},0))
