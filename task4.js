@@ -197,3 +197,18 @@ console.log(
   })
 );
 
+
+
+// Given an array of numbers,
+// create a new array whose has the string Even if the number is even, and Odd if the number is Odd. Use map.
+let arr4 = [10, 2, 3, 5, 9, 1, 7, 17, 40, 5, 6];
+console.log(
+  arr3.map((elem) => {
+    if (elem % 2 == 0) {
+      return "Even";
+    } else {
+      return "Odd";
+    }
+  })
+);
+
