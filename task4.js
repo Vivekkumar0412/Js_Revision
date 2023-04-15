@@ -173,3 +173,13 @@ console.log(
   })
 );
 
+// Task 3 Given an array of numbers,
+// create a new array whose numbers are the squares of the number of the input array. Use map
+
+let arr2 = [10, 2, 3, 40, 5, 6];
+console.log(
+  arr2.map((elem) => {
+    return elem * elem;
+  })
+);
+
