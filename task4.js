@@ -407,3 +407,15 @@ let arr15 = ["vivek", "singh", "rajput"];
 let new_arr15 = arr15.reduce((a, c) => {
   return `${a}::${c}`;
 });
+
+
+let new_arr151 = arr15.reduce((a, c) => {
+  // let sum = a.length;
+  // console.log(a);
+  return a + c.length;
+}, 0);
+
+let new_arr152 = arr15.reduce((a, c) => {
+  return a + c[0];
+}, "");
+console.log(new_arr152);
