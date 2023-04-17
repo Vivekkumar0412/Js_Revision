@@ -582,3 +582,17 @@ let new_arr183 = arr18.filter((elem) => {
     return elem;
   }
 });
+
+
+let new_arr184 = arr18.reduce((a, c) => {
+  let s = totalMarks(c);
+  if (s > 200) {
+    a = { name: c.name, totalMarks: s };
+    return a;
+  }
+}, {});
+console.log(new_arr18);
+console.log(new_arr181);
+console.log(new_arr182);
+console.log(new_arr183);
+console.log(new_arr184);
