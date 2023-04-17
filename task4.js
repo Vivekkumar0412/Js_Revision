@@ -378,7 +378,7 @@ let arr13 = [
   { id: 78, name: "James" },
 ];
 
-let new_arr13 = arr13.map((a)=>{
+let new_arr13 = arr13.map((a) => {
   let str = `<p class = 'id${a.id}'> ${a.name}</p>`;
   return str;
 });
@@ -386,14 +386,24 @@ let new_arr13 = arr13.map((a)=>{
 console.log(new_arr13);
 console.log(new_arr13.join(""));
 
-let arr14 = ["vivek","sarthak","pranav","raj"];
-const new_arr142 = arr14.reduce((a,b)=>{
+let arr14 = ["vivek", "sarthak", "pranav", "raj"];
+const new_arr142 = arr14.reduce((a, b) => {
   return `${a}::${b}`;
 });
 
 console.log(new_arr142);
-let new_arr14 =(arr14.map((elem)=>{
+let new_arr14 = arr14.map((elem) => {
   let str = `${elem}::`;
   return str;
-}));
+});
 console.log(new_arr14.join(""));
+
+// Task15 Given an array of string, use reduce to
+// a) concatenate all the strings with :: between them
+// b) compute the sum of the length of all the strings
+// c) concatenate the first character of all the strings
+
+let arr15 = ["vivek", "singh", "rajput"];
+let new_arr15 = arr15.reduce((a, c) => {
+  return `${a}::${c}`;
+});
