@@ -438,3 +438,21 @@ let arr16 = [
 let new_arr16 = arr16.reduce((a, c) => {
   return a + c.age;
 }, 0);
+
+
+let new_arr161 = arr16.reduce((a, c) => {
+  if (c.age > 27) {
+    a++;
+  }
+  return a;
+}, 0);
+
+let new_arr162 = arr16.reduce((a, c) => {
+  let a_val = a.age;
+  let c_val = c.age;
+  if (a_val < c_val) {
+    return a;
+  } else {
+    return c;
+  }
+});
