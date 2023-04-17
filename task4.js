@@ -490,3 +490,14 @@ let arr17 = ["Hello", "React", "Java", "Python", "Hibernate", "JavaScript"];
 let new_arr17 = arr17.reduce((a, c) => {
   return `${a}#${c}`;
 });
+
+
+let new_arr171 = arr17.reduce((a, c) => {
+  for (let i = 0; i < c.length; i++) {
+    if (c[i] == "a") {
+      a++;
+    }
+  }
+
+  return a;
+}, 0);
