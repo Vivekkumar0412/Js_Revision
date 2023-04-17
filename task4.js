@@ -530,3 +530,23 @@ console.log(getCh(ch));
 console.log(new_arr17);
 console.log(new_arr171);
 console.log(new_arr172);
+
+
+// Task 18.1 Use reduce to calculate the total marks received in maths by all the students.
+// Task 18.2Use reduce to calculate the number of students who scored more than 60 in science.
+// Task 18.3Use reduce to calculate the student who scored the highest marks in english.
+// Task 18.4Use reduce to create an array of students who scored more than 60 in maths.
+// Task 18.5 Use reduce to create an array of students whose total marks is less than 200.
+
+let arr18 = [
+  { name: "Jack", maths: 55, english: 60, science: 62 },
+  { name: "Anita", maths: 62, english: 65, science: 56 },
+  { name: "Thomas", maths: 68, english: 72, science: 75 },
+  { name: "Steve", maths: 51, english: 56, science: 68 },
+  { name: "Julia", maths: 47, english: 77, science: 72 },
+  { name: "Mary", maths: 72, english: 55, science: 81 },
+];
+
+let new_arr18 = arr18.reduce((a, c) => {
+  return a + c.maths;
+}, 0);
