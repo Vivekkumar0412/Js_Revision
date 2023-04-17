@@ -569,3 +569,16 @@ let new_arr182 = arr18.reduce((a, c) => {
     return c;
   }
 });
+
+
+const totalMarks = (elem) => {
+  let sum = 0;
+  sum = sum + elem.english + elem.science + elem.maths;
+  return sum;
+};
+let new_arr183 = arr18.filter((elem) => {
+  let total = totalMarks(elem);
+  if (total > 200) {
+    return elem;
+  }
+});
