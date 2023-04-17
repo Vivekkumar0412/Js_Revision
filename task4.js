@@ -456,3 +456,24 @@ let new_arr162 = arr16.reduce((a, c) => {
     return c;
   }
 });
+
+
+let new_arr163 = arr16.reduce((a, c) => {
+  let a_val = a.age;
+  let c_val = c.age;
+  if (a_val < c_val) {
+    return c;
+  } else {
+    return a;
+  }
+});
+
+let new_arr164 = arr16.reduce((a, c) => {
+  let names = c.name;
+  if (names[0] == "M") {
+    a++;
+  }
+
+  return a;
+}, 0);
+console.log(new_arr164);
