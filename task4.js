@@ -477,3 +477,16 @@ let new_arr164 = arr16.reduce((a, c) => {
   return a;
 }, 0);
 console.log(new_arr164);
+
+
+// Task 17.1 Use reduce to concatenate all the strings with a # between them.The output should be "Hello#React#Java#Python#Hibernate#JavaScript"
+// Task 17.2Use reduce to count the number of times the character "a" appears in the array.
+// Task 17.3Use reduce to compute the longest string in the arrayTask
+// 17.4Use reduce to compute the number of strings that start with a specified character ch  provided as a parameter.
+// So, if ch="A", the output should be 0.So, if ch="J",
+// the output should be 2.So, if ch="R", the output should be 1.
+
+let arr17 = ["Hello", "React", "Java", "Python", "Hibernate", "JavaScript"];
+let new_arr17 = arr17.reduce((a, c) => {
+  return `${a}#${c}`;
+});
