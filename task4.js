@@ -501,3 +501,32 @@ let new_arr171 = arr17.reduce((a, c) => {
 
   return a;
 }, 0);
+
+
+let new_arr172 = arr17.reduce((a, c) => {
+  let a_val = a.length;
+  let c_val = c.length;
+  if (a_val < c_val) {
+    return c;
+  } else {
+    return a;
+  }
+});
+let ch = "v";
+let getCh = (ch) => {
+  let new_arr173 = arr17.reduce((a, c) => {
+    for (let i = 0; i < c.length; i++) {
+      if (c[i] == ch) {
+        a++;
+      }
+    }
+
+    return a;
+  }, 0);
+  return new_arr173;
+};
+
+console.log(getCh(ch));
+console.log(new_arr17);
+console.log(new_arr171);
+console.log(new_arr172);
