@@ -296,58 +296,104 @@ console.log(
   })
 );
 
-
-
 // Task 13 Given an array of JSON Create a new array of JSON which has an additional field fullname in it.
 //  For the first JSON the fullname is "Jack Smith"
 
 let arr11 = [
-    { fname: "Jack", lname: "Smith", city: "London" },
-    { fname: "Mary", lname: "Markle", city: "Amsterdam" },
-    { fname: "Ed", lname: "May", city: "Paris" },
-    { fname: "Tim", lname: "Gates", city: "Rome" },
-  ];
-  
-  console.log(arr11.map((elem)=>{
-      let str = `fname : ${elem.fname} , lname : ${elem.lname} , city : ${elem.city} , fullname : ${`${elem.fname}  ${elem.lname}`}`;
-      return str;
-  }))
+  { fname: "Jack", lname: "Smith", city: "London" },
+  { fname: "Mary", lname: "Markle", city: "Amsterdam" },
+  { fname: "Ed", lname: "May", city: "Paris" },
+  { fname: "Tim", lname: "Gates", city: "Rome" },
+];
 
-  
-  
-// Task14 Given an array of numbers, use reduce to 
+console.log(
+  arr11.map((elem) => {
+    let str = `fname : ${elem.fname} , lname : ${elem.lname} , city : ${
+      elem.city
+    } , fullname : ${`${elem.fname}  ${elem.lname}`}`;
+    return str;
+  })
+);
+
+// Task14 Given an array of numbers, use reduce to
 // a) compute the sum of the numbers
 // b) product of numbers
 // c) max number
 // d) min number
 // e) count the numbers greater than 10
 
-let arr12 = [2,3,3,567,4,222,5,666,543,2114,5,4646,64,57];
-console.log(arr12.reduce((acc,crr)=>{
+let arr12 = [2, 3, 3, 567, 4, 222, 5, 666, 543, 2114, 5, 4646, 64, 57];
+console.log(
+  arr12.reduce((acc, crr) => {
     return acc + crr;
-}));
+  })
+);
 
-
-console.log(arr12.reduce((acc,crr)=>{
+console.log(
+  arr12.reduce((acc, crr) => {
     return acc * crr;
-}));
+  })
+);
 
-
-console.log(arr12.reduce((a,b)=>{
-    if(a < b){
-        return a;
-    }else{
-        return b;
+console.log(
+  arr12.reduce((a, b) => {
+    if (a < b) {
+      return a;
+    } else {
+      return b;
     }
-}));
+  })
+);
 
-
-console.log(arr12.reduce((a,b)=>{
+console.log(
+  arr12.reduce((a, b) => {
     let count = 0;
-    if(b > 100){
-        count++;
-        a+=count;
-    };
+    if (b > 100) {
+      count++;
+      a += count;
+    }
 
     return a;
-},0))
+  }, 0)
+);
+
+let doc_title = document.title;
+
+window.addEventListener("blur", () => {
+  document.title = "Jaldi wapas aa bhai mere 😒";
+});
+
+window.addEventListener("focus", () => {
+  document.title = doc_title;
+});
+
+// Task 10 Given an array of JSONs, create a string using map and join as shown below.So,
+//  if the array was the string should be
+//  <p class='id101'>Mark</p> <p class='id105'>Steve</p> <p class='id78'>James</p>
+//  Google and read about how to use escape character and put a quote
+
+let arr13 = [
+  { id: 101, name: "Mark" },
+  { id: 105, name: "Steve" },
+  { id: 78, name: "James" },
+];
+
+let new_arr13 = arr13.map((a)=>{
+  let str = `<p class = 'id${a.id}'> ${a.name}</p>`;
+  return str;
+});
+
+console.log(new_arr13);
+console.log(new_arr13.join(""));
+
+let arr14 = ["vivek","sarthak","pranav","raj"];
+const new_arr142 = arr14.reduce((a,b)=>{
+  return `${a}::${b}`;
+});
+
+console.log(new_arr142);
+let new_arr14 =(arr14.map((elem)=>{
+  let str = `${elem}::`;
+  return str;
+}));
+console.log(new_arr14.join(""));
