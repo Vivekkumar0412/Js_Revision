@@ -419,3 +419,22 @@ let new_arr152 = arr15.reduce((a, c) => {
   return a + c[0];
 }, "");
 console.log(new_arr152);
+
+
+// ask 16 Given an array of JSON,
+// a) compute the sum of ages
+// b) Countthe number of persons who are more than 27 years of age
+// c) Compute the youngest person
+// d) Compute the oldest person
+// e) Count the number of people whose name starts with 'M'
+
+let arr16 = [
+  { name: "Mark", age: 23 },
+  { name: "Steve", age: 28 },
+  { name: "Mary", age: 25 },
+  { name: "Bill", age: 34 },
+];
+
+let new_arr16 = arr16.reduce((a, c) => {
+  return a + c.age;
+}, 0);
