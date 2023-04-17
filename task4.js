@@ -650,3 +650,44 @@ let cars = [
     colors: ["White", "Silver", "Yellow", "Black"],
   },
 ];
+
+
+
+// let new_cars = cars.filter((elem)=>{
+//   let color_cars = elem.colors.filter((color)=>{
+//     if(color == "Blue"){
+//       return true;
+//     }else{
+//       return false;
+//     };
+//   });
+
+//   if(color_cars == true){
+//     return elem;
+//   }
+// });
+
+let new_cars = cars.filter((elem)=>{
+  for(let i = 0; i<elem.colors.length; i++){
+    if(elem.colors[i] == "Black"){
+      return elem;
+    };
+  };
+
+})
+
+let new_cars2 = cars.filter((elem)=>{
+  // let same_color = "";
+  let same_color = elem.colors.find((color)=>{
+    return color == "Black";
+  });
+  return same_color;
+});
+
+let petrol_cars = cars.filter((elem)=>{
+  return elem.fuel == "Petrol" && elem.colors.find((color)=>{
+    return color == "Black";
+  });
+})
+console.log(new_cars2);
+console.log(petrol_cars);
